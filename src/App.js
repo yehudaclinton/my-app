@@ -16,11 +16,11 @@ function SponsorCard({ sponsor }) {
         <div className="row no-gutters">
           <div className="col-md-8">
             <Card.Body>
-            <div className="col-md-4">
-              <Card className="sponsor-image-card">
-                <Card.Img src={sponsor.logo_url} alt={`\\\\\${sponsor.name} (logo)`} />
-              </Card>
-            </div>
+              <div className="col-md-4">
+                <Card className="sponsor-image-card">
+                  <Card.Img src={sponsor.logo_url} alt={`\\\\\${sponsor.name} (logo)`} />
+                </Card>
+              </div>
               <Card.Text>{sponsor.description}</Card.Text>
               <Button className="btn-custom" href={sponsor.website_url}>
                 Visit Website <FontAwesomeIcon icon={faAngleDoubleRight} />
@@ -50,14 +50,9 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      try {
-        const response = await fetch("https://youngstartup.io/api/cwebsite/get_sponsors");
-        const data = await response.json();
-        console.log(data);
-        setSponsors(data ?? []);
-      } catch (error) {
-        console.log(error);
-      }
+      const response = await fetch("https://youngstartup.io/api/cwebsite/get_sponsors");
+      const data = await response.json();
+      setSponsors(data ?? []);
     }
 
     fetchData();
