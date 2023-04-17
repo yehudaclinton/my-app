@@ -31,14 +31,19 @@ code {
   flex-wrap: nowrap;
 }
 
-.sponsor-image-card {
-  width: 150px;
-  height: 150px;
-}
-
 .sponsor-headshot {
   border-radius: 50%;
   margin-left: 10px;
+}
+
+.headshot-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f2f2f2;
+  height: 160px;
 }
 
 .sponsor-card .card-title {
@@ -49,10 +54,6 @@ code {
 
 .sponsor-card .card-text {
   margin-bottom: 10px;
-}
-
-.sponsor-card .team-members {
-  margin-top: 20px;
 }
 
 .sponsor-card .website-button {

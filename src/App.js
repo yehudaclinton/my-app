@@ -27,7 +27,7 @@ function SponsorCard({ sponsor }) {
               </Button>
             </Card.Body>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 headshot-container">
             {ceo && ceo.headshot_url && (
               <img
                 src={ceo.headshot_url}
